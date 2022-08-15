@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    ---Bright-Yellow: hsl(71, 73%, 54%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Light-Gray);
+    height: 100vh;
+    width: 100%;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 635px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container .about {
+    padding: 40px;
+    height: 216px;
+    
+}
+.container .about h1 {
+    color: var(--Cyan);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.container .about h2 {
+    color: var(---Bright-Yellow);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.container .about p {
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.container .footer {
+    display: flex;
+    width: 100%;
+    color: var(--Light-Gray);
+    height: 258px;
+}
+.container .footer .left {
+    width: 50%;
+    padding: 40px;
+    background-color: var(--Cyan);
+    border-radius: 0 0 0 10px;
+}
+.container .footer .left .price {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 9px;
+}
+.container .footer .left .price small {
+    color: var(--Light-Gray);
+    opacity: 0.5;
+    margin-left: 15px;
+}
+.container .footer .left button {
+    width: 100%;
+    margin-top: 28px;
+    height: 50px;
+    border-radius: 5px;
+    border: inherit;
+    font-size: 16px;
+    background-color: var(---Bright-Yellow);
+    color:white;
+}
+.container .footer .right {
+    width: 50%;
+    background-color: var(--Cyan);
+    filter: brightness(105%);
+    padding: 40px;
+    border-radius: 0 0 10px 0;
+}
+.container .footer .right ul {
+    margin-top: 15px;
+    list-style: none;
+    line-height: 1.4;
+    color:var(--Light-Gray);
+    opacity: 0.7;
+    font-size: 15px;
+}
+@media screen and (max-width:1117px) {
+    .container {
+        width: 311px;
+        height: 721px;
+        border-radius: 5px;
+    }
+    .container .about {
+        height: 267px;
+        padding: 23px;
+    }
+    .container .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .footer .left {
+        width: 100%;
+        padding: 23px;
+        border-radius: inherit;
+    }
+    .container .footer .right {
+        width: 100%;
+        padding: 23px;
+        border-radius:0 0 5px 5px;
+    }
+}
